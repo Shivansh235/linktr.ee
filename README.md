@@ -34,3 +34,18 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+
+=> Linktree Clone with Next.js-:
+
+
+This project is a Linktree Clone built with Next.js, allowing users to create a personal page with multiple links.
+
+Tech Stack:
+
+
+Next.js – Fast, server-rendered React framework.
+Tailwind CSS – For modern and responsive styling.
+React Hook Form – Simplifies form handling.
+NextAuth.js – Currently using GitHub OAuth (more providers coming soon).
+MongoDB (or any DB) – Stores user links and profiles.
