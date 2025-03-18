@@ -7,7 +7,7 @@ const Navbar = () => {
 
   const pathname = usePathname();
    
-   const showNavbar = ["/", "/generate","/Template",'/Login'].includes(pathname)
+   const showNavbar = ["/", "/generate","/Template",'/Login','/learn','/pricing','/Marketplace'].includes(pathname)
   return (
     <>{showNavbar && <nav className="bg-white fixed w-[80vw] z-50 top-10 right-[10vw] p-3 rounded-full">
       <div className="logo flex ml-4 items-center gap-20">
