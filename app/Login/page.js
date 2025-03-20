@@ -5,10 +5,10 @@ import { useRouter } from 'next/navigation'
 
 const Login = () => {
   const { data: session } = useSession()
-  const router = useRouter();
+  const Router = useRouter();
   if(session){
    
-    router.push('/generate')
+    Router.push('/generate')
   }
 
 
