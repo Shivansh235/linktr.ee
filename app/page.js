@@ -17,8 +17,8 @@ export default function Home() {
 
   return (
     <main>
-      <section className="bg-[#254f1a] text-white min-h-screen grid grid-cols-1 md:grid-cols-2 p-6 md:p-12">
-        <div className="flex flex-col justify-center gap-4 text-center md:text-left">
+      <section className="bg-[#254f1a] text-white min-h-screen grid grid-cols-1 md:grid-cols-2 p-6  md:p-12">
+        <div className="flex flex-col justify-center gap-4 pl-24 text-center md:text-left">
           <p className="text-yellow-300 text-4xl md:text-6xl font-bold mt-10 md:mt-24">
             Everything you are. In one, simple link in bio.
           </p>

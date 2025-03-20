@@ -18,7 +18,7 @@ const Discover = () => {
       <div className="py-12 px-4 md:px-8">
         <h2 className="text-center text-4xl md:text-5xl font-bold mb-4 text-gray-800">Discover Amazing Content</h2>
         <p className="text-center text-lg md:text-xl text-gray-600 max-w-2xl mx-auto">
-          Explore a variety of curated categories to find content that resonates with you. Whether you're into music, fashion, fitness, or travel, we've got something for everyone!
+          Explore a variety of curated categories to find content that resonates with you. Whether you are into music, fashion, fitness, or travel, we have got something for everyone!
         </p>
       </div>
 

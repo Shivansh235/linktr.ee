@@ -51,7 +51,7 @@ const Generate = () => {
 
   return (
     <div className="bg-[#225abf] text-white min-h-screen grid grid-cols-1 md:grid-cols-2 p-5">
-      <div className="flex flex-col justify-center items-center mt-10 md:mt-20">
+      <div className="flex flex-col justify-center items-center mt-32 md:mt-32">
         <h1 className="text-3xl md:text-5xl font-bold text-center">Create your Bittree</h1>
         <div className="flex flex-col justify-center items-center gap-5 w-full max-w-md">
           <h2 className="font-semibold text-xl md:text-2xl mt-5 text-center">Step 1: Claim your Handle</h2>
@@ -116,7 +116,7 @@ const Generate = () => {
           </button>
         </div>
       </div>
-      <div className="hidden md:flex w-full h-screen">
+      <div className="hidden md:flex w-full mt-14 pr-20 h-screen">
         <img
           className="h-full w-full object-cover"
           src="https://assets.production.linktr.ee/auth/2387/media/banner-login-desktop.5084c2cf19da310f7e78.png"
