@@ -1,9 +1,9 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, Suspense } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import { useSearchParams } from "next/navigation";
 
-const Generate = () => {
+const GeneratePage = () => {
   const searchParams = useSearchParams();
   const [links, setLinks] = useState([{ link: "", linkText: "" }]);
   const [handle, setHandle] = useState(searchParams.get("handle") || "");
@@ -14,7 +14,7 @@ const Generate = () => {
     setLinks([...links, { link: "", linkText: "" }]);
   };
 
-  const handlechange = (index, link, linkText) => {
+  const handleChange = (index, link, linkText) => {
     setLinks((initialLinks) =>
       initialLinks.map((item, i) =>
         i === index ? { link, linkText } : item
@@ -35,7 +35,7 @@ const Generate = () => {
       redirect: "follow",
     };
 
-    const response = await fetch("http://localhost:3000/api/generate", requestOptions);
+    const response = await fetch("/api/generate", requestOptions);
     const result = await response.json();
 
     if (result.success) {
@@ -68,14 +68,14 @@ const Generate = () => {
             <div key={index} className="flex flex-col md:flex-row w-full gap-4">
               <input
                 value={item.link}
-                onChange={(e) => handlechange(index, e.target.value, item.linkText)}
+                onChange={(e) => handleChange(index, e.target.value, item.linkText)}
                 className="px-4 py-2 text-black rounded-3xl w-full md:w-1/2 focus:outline-blue-700"
                 type="text"
                 placeholder="Enter link"
               />
               <input
                 value={item.linkText}
-                onChange={(e) => handlechange(index, item.link, e.target.value)}
+                onChange={(e) => handleChange(index, item.link, e.target.value)}
                 className="px-4 py-2 text-black rounded-3xl w-full md:w-1/2 focus:outline-blue-700"
                 type="text"
                 placeholder="Enter link text"
@@ -127,5 +127,11 @@ const Generate = () => {
     </div>
   );
 };
+
+const Generate = () => (
+  <Suspense fallback={<div>Loading...</div>}>
+    <GeneratePage />
+  </Suspense>
+);
 
 export default Generate;
