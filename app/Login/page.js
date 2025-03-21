@@ -18,7 +18,7 @@ const Login = () => {
   
     <div className='text-white pt-40 container mx-auto '>
       <h1 className='text-center font-bold text-3xl'>Login/Signup to Get Started</h1>
-      <h3>Currently you can go through only github!!</h3>
+      <h3 className='text-center font-medium text-lg'>Currently you can go through only github!!</h3>
 
       <div className="flex flex-col gap-2 min-h-[72vh] items-center  p-10">
 
