@@ -4,8 +4,8 @@ import { FaGithub, FaYoutube, FaTwitter } from "react-icons/fa";
 
 const Footer2 = () => {
   return (
-    <footer className="bg-orange-400 w-screen fixed bottom-0 left-0 flex flex-col items-center justify-center text-white py-3">
-      <div className="flex space-x-6 text-2xl">
+    <footer className="bg-orange-400 w-full fixed bottom-0 left-0 flex flex-col items-center justify-center text-white py-3 px-4">
+      <div className="flex space-x-6 text-xl sm:text-2xl">
         <Link href="https://github.com/shivansh235" target="_blank">
           <FaGithub className="hover:text-gray-200 transition duration-300" />
         </Link>
@@ -16,7 +16,7 @@ const Footer2 = () => {
           <FaTwitter className="hover:text-gray-200 transition duration-300" />
         </Link>
       </div>
-      <p className="text-sm mt-2 text-center">
+      <p className="text-xs sm:text-sm mt-2 text-center">
         © {new Date().getFullYear()} Your Name. All rights reserved.
       </p>
     </footer>
@@ -24,4 +24,3 @@ const Footer2 = () => {
 };
 
 export default Footer2;
-

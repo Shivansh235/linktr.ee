@@ -13,10 +13,12 @@ const Discover = () => {
   ];
 
   return (
-    <div className="bg-gray-100 min-h-screen flex flex-col justify-between">
+    <div className="bg-gray-100 min-h-screen flex flex-col justify-between pt-[80px] md:pt-[120px]">
       {/* Header Section */}
       <div className="py-12 px-4 md:px-8">
-        <h2 className="text-center text-4xl md:text-5xl font-bold mb-4 text-gray-800">Discover Amazing Content</h2>
+        <h2 className="text-center text-4xl md:text-5xl font-bold mb-4 text-gray-800">
+          Discover Amazing Content
+        </h2>
         <p className="text-center text-lg md:text-xl text-gray-600 max-w-2xl mx-auto">
           Explore a variety of curated categories to find content that resonates with you. Whether you are into music, fashion, fitness, or travel, we have got something for everyone!
         </p>
@@ -41,7 +43,9 @@ const Discover = () => {
       {/* Footer Section */}
       <footer className="bg-gray-900 text-gray-300 py-6 text-center">
         <p className="text-lg font-semibold">Join the Discovery</p>
-        <p className="text-sm mt-2">Stay updated with the latest trends and content across various categories.</p>
+        <p className="text-sm mt-2">
+          Stay updated with the latest trends and content across various categories.
+        </p>
         <div className="mt-4">
           <button className="bg-blue-500 text-white px-6 py-2 rounded-lg hover:bg-blue-600 transition">
             Explore More
