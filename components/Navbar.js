@@ -13,7 +13,7 @@ const Navbar = () => {
   return (
     <>
       {showNavbar && (
-        <nav className="bg-white fixed w-[80vw] z-50 top-10 right-[10vw] p-5 rounded-full">
+        <nav className="bg-white fixed w-[80vw] md:w-[90vw] z-50 top-10 right-[10vw] md:right-[5vw] p-5 rounded-full">
           <div className="flex items-center justify-between px-4">
           <Link href={"/"}
         ><svg
