@@ -20,71 +20,39 @@ const Marketplace = () => {
         Customize your Linktree experience with premium offerings from top sellers.
       </p>
 
-      <section className="grid grid-cols-1 md:grid-cols-2 gap-8 p-4 mt-12 items-start">
-        {/* Left Section */}
-        <div className="one flex flex-col items-center md:items-start">
-          <h1 className="font-bold text-xl sm:text-2xl md:text-3xl text-center md:text-left">
-            Browse Categories
-          </h1>
-
-          {/* Hamburger for small screens */}
-          <div className="md:hidden flex justify-center mt-4">
+      {/* Buttons & Images in a single row */}
+      <section className="flex flex-col md:flex-row flex-wrap justify-center gap-9 p-6 mt-8">
+        {/* Browse Categories */}
+        <div className="flex flex-row justify-center md:justify-start gap-4">
+          {[
+            "Templates",
+            "E-books",
+           
+            "Social Media Kits",
+            "Graphics",
+            "Marketing Tools",
+            "Business Resources",
+           
+          ].map((category, index) => (
             <button
-              onClick={() => setIsOpen(!isOpen)}
-              className="flex items-center gap-2 px-4 py-2 bg-white text-black rounded-full shadow-md hover:bg-gray-200 transition"
+              key={index}
+              className="py-2 px-4 w-48 text-center rounded-full font-medium bg-white hover:bg-slate-300 transition"
             >
-              {isOpen ? <X size={20} /> : <Menu size={20} />}
-              <span className="font-medium">Categories</span>
+              {category}
             </button>
-          </div>
-
-          {/* Category Buttons (Responsive) */}
-          <div
-            className={`${
-              isOpen ? "flex" : "hidden"
-            } md:flex flex-col w-full sm:w-[70%] md:w-[20vw] justify-center gap-4 items-center mt-6 md:mt-10`}
-          >
-            {[
-              "Templates",
-              "E-books",
-              "Plugins",
-              "Social Media Kits",
-              "Graphics",
-              "Marketing Tools",
-              "Business Resources",
-              "Exclusive Content",
-            ].map((category, index) => (
-              <button
-                key={index}
-                className="py-2 w-full sm:w-56 md:w-56 text-center rounded-full font-medium bg-white hover:bg-slate-300 transition"
-              >
-                {category}
-              </button>
-            ))}
-          </div>
-
-          {/* Single Image (Aligned with Template Button) */}
-          <div className="flex justify-center mt-6 md:mt-10">
-            <img
-              className="h-[35vh] sm:h-[50vh] md:h-[60vh] w-[80vw] sm:w-[50vw] md:w-[20vw] rounded-2xl hover:bg-slate-200 transition"
-              src="/M1.webp"
-              alt="Marketplace Item"
-            />
-          </div>
+          ))}
         </div>
 
-        {/* Right Section (Images Aligned with Left Content) */}
-        <div className="Two flex flex-col md:flex-row justify-center items-center gap-6 sm:gap-8 mt-6 md:mt-16 mb-7">
-          <img
-            className="h-[35vh] sm:h-[50vh] md:h-[60vh] w-[80vw] sm:w-[50vw] md:w-[20vw] rounded-2xl hover:bg-slate-200 transition"
-            src="/M2.webp"
-            alt="Digital Asset 1"
-          />
-          <img
-            className="h-[35vh] sm:h-[50vh] md:h-[60vh] w-[80vw] sm:w-[50vw] md:w-[20vw] rounded-2xl hover:bg-slate-200 transition"
-            src="/M3.webp"
-            alt="Digital Asset 2"
-          />
+        {/* Images */}
+        <div className="flex flex-wrap justify-center gap-6">
+          {["/M1.webp", "/M2.webp", "/M3.webp"].map((src, index) => (
+            <img
+              key={index}
+              className="h-[35vh] sm:h-[50vh] md:h-[60vh] w-[80vw] sm:w-[50vw] md:w-[20vw] rounded-2xl hover:bg-slate-200 transition object-cover"
+              src={src}
+              alt={`Digital Asset ${index + 1}`}
+            />
+          ))}
         </div>
       </section>
 

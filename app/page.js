@@ -42,15 +42,20 @@ export default function Home() {
           </div>
         </div>
         <div className="flex justify-center items-center mt-10 md:mt-32">
-          <Image
-            height={288}
-            width={288}
-            src="https://techcrunch.com/wp-content/uploads/2024/03/Linktree-featured.jpeg?w=377"
-            alt="homepage image"
-            unoptimized
-            className="w-60 md:w-72"
-          />
-        </div>
+  <Image
+    height={450}
+    width={450}
+    src="/linktr.ee.webp"
+    alt="homepage image"
+    unoptimized
+    className="w-[22rem] md:w-[28rem] rounded-3xl shadow-2xl
+               animate-[spinX_20s_linear_infinite] hover:scale-110 hover:rotate-x-6
+               transition-transform duration-500 ease-in-out"
+  />
+</div>
+
+
+
       </section>
 
       <section className="bg-red-500 min-h-screen text-white grid grid-cols-1 md:grid-cols-2 p-6 md:p-12">
